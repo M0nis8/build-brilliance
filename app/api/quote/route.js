@@ -14,15 +14,15 @@ export async function POST(req) {
     const { data: emailData, error } = await resend.emails.send({
       from: 'Build Brilliance <onboarding@resend.dev>',
       to: process.env.CONTACT_EMAIL || 'info@buildbrilliance.com',
-      subject: "New Quote Request from  ",
-      html: "
+      subject: `New Quote Request from ${data.name}`,
+      html: `
         <h2>New Quote Request</h2>
-        <p><strong>Name:</strong>  </p>
-        <p><strong>Email:</strong> </p>
-        <p><strong>Phone:</strong> </p>
-        <p><strong>Type:</strong> </p>
-        <p><strong>Description:</strong><br/></p>
-      "
+        <p><strong>Name:</strong> ${data.name}</p>
+        <p><strong>Email:</strong> ${data.email}</p>
+        <p><strong>Phone:</strong> ${data.phone}</p>
+        <p><strong>Type:</strong> ${data.type}</p>
+        <p><strong>Description:</strong><br/>${data.description}</p>
+      `
     });
 
     if (error) {
