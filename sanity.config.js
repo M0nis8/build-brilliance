@@ -7,7 +7,7 @@ import schemas from './sanity/schemas/index';
 export default defineConfig({
   name: 'build-brilliance',
   title: 'Build Brilliance CMS',
-  projectId: 'w4j4rpn7',
+  projectId: 'w434rpn7',
   dataset: 'production',
   basePath: '/studio',
   plugins: [structureTool()],
