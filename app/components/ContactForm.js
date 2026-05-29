@@ -74,9 +74,9 @@ export default function ContactForm() {
           <>
             <span className="spinner" style={{ width: '20px', height: '20px', border: '3px solid rgba(255,255,255,0.3)', borderTopColor: 'white', borderRadius: '50%', animation: 'spin 1s linear infinite' }}></span>
             Sending...
-            <style jsx>{
+            <style jsx>{\`
               @keyframes spin { to { transform: rotate(360deg); } }
-            }</style>
+            \`}</style>
           </>
         ) : 'Send Message'}
       </button>
